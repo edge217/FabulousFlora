@@ -14,7 +14,6 @@ import dev.architectury.utils.EnvExecutor;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
@@ -47,7 +46,7 @@ public final class FabulousFlora {
             ClientLifecycleEvent.CLIENT_STARTED.register(instance -> {
                 FFBlocks.BLOCKS.forEach(blockRegistrySupplier -> {
                     Block block = blockRegistrySupplier.get();
-                    RenderTypeRegistry.register(RenderLayer.getTranslucent(), block);
+                    RenderTypeRegistry.register(RenderLayer.getCutout(), block);
                 });
             });
 

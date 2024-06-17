@@ -6,16 +6,13 @@ package net.watsonrolfes.fabulousflora.registry;
 
 import dev.architectury.registry.registries.DeferredRegister;
 import dev.architectury.registry.registries.RegistrySupplier;
-import net.minecraft.block.AbstractBlock;
-import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.FlowerBlock;
+import net.minecraft.block.*;
+import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.component.type.SuspiciousStewEffectsComponent;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
-import net.minecraft.registry.Registries;
 import net.minecraft.registry.RegistryKeys;
-import net.minecraft.util.Identifier;
+import net.minecraft.sound.BlockSoundGroup;
 import net.watsonrolfes.fabulousflora.FabulousFlora;
 
 import java.util.function.Supplier;
@@ -56,7 +53,7 @@ public class FFBlocks {
     }
 
     protected static Supplier<FlowerBlock> createFlowerBlock(String id) {
-        return () -> new FlowerBlock(SuspiciousStewEffectsComponent.DEFAULT, AbstractBlock.Settings.create().noCollision().breakInstantly().nonOpaque());
+        return () -> new FlowerBlock(SuspiciousStewEffectsComponent.DEFAULT, AbstractBlock.Settings.create().mapColor(MapColor.DARK_GREEN).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS).offset(AbstractBlock.OffsetType.XZ).pistonBehavior(PistonBehavior.DESTROY));
     }
 
     protected static Supplier<BlockItem> createBlockItem(Block block) {
