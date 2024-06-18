@@ -19,6 +19,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.text.Text;
 import net.watsonrolfes.fabulousflora.registry.FFBlocks;
+import net.watsonrolfes.fabulousflora.worldgen.FlowersGeneration;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -34,6 +35,7 @@ public final class FabulousFlora {
 
         FFBlocks.register();
         TABS.register();
+        FlowersGeneration.init();
 
         EnvExecutor.runInEnv(Env.CLIENT, () -> FFClient::initClient);
     }

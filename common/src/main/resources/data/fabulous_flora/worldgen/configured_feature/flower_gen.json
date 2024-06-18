@@ -1,0 +1,131 @@
+{
+  "type": "minecraft:flower",
+  "config": {
+    "tries": 64,
+    "xz_spread": 7,
+    "y_spread": 3,
+    "feature": {
+      "feature": {
+        "type": "minecraft:simple_block",
+        "config": {
+          "to_place": {
+            "type": "minecraft:weighted_state_provider",
+            "entries": [
+              {
+                "weight": 1,
+                "data": {
+                  "Name": "fabulous_flora:red_arum_lily"
+                }
+              },
+              {
+                "weight": 1,
+                "data": {
+                  "Name": "fabulous_flora:orange_tulip"
+                }
+              },
+              {
+                "weight": 1,
+                "data": {
+                  "Name": "fabulous_flora:yellow_bell"
+                }
+              },
+              {
+                "weight": 1,
+                "data": {
+                  "Name": "fabulous_flora:lime_tuberose"
+                }
+              },
+              {
+                "weight": 1,
+                "data": {
+                  "Name": "fabulous_flora:green_astar"
+                }
+              },
+              {
+                "weight": 1,
+                "data": {
+                  "Name": "fabulous_flora:cyan_poppy"
+                }
+              },
+              {
+                "weight": 1,
+                "data": {
+                  "Name": "fabulous_flora:light_blue_rose"
+                }
+              },
+              {
+                "weight": 1,
+                "data": {
+                  "Name": "fabulous_flora:blue_chrysanthemum"
+                }
+              },
+              {
+                "weight": 1,
+                "data": {
+                  "Name": "fabulous_flora:purple_iris"
+                }
+              },
+              {
+                "weight": 1,
+                "data": {
+                  "Name": "fabulous_flora:magenta_sweetpea"
+                }
+              },
+              {
+                "weight": 1,
+                "data": {
+                  "Name": "fabulous_flora:pink_cherry_blossom"
+                }
+              },
+              {
+                "weight": 1,
+                "data": {
+                  "Name": "fabulous_flora:black_orchid"
+                }
+              },
+              {
+                "weight": 1,
+                "data": {
+                  "Name": "fabulous_flora:gray_mogra"
+                }
+              },
+              {
+                "weight": 1,
+                "data": {
+                  "Name": "fabulous_flora:white_lavender"
+                }
+              },
+              {
+                "weight": 1,
+                "data": {
+                  "Name": "fabulous_flora:brown_hydrangea"
+                }
+              },
+              {
+                "weight": 1,
+                "data": {
+                  "Name": "fabulous_flora:glow_calla_lily"
+                }
+              },
+              {
+                "weight": 1,
+                "data": {
+                  "Name": "fabulous_flora:light_gray_morning_glory"
+                }
+              }
+            ]
+          }
+        }
+      },
+      "placement": [
+        {
+          "type": "minecraft:block_predicate_filter",
+          "predicate": {
+            "type": "minecraft:matching_blocks",
+            "blocks": "minecraft:air"
+          }
+        }
+      ]
+    }
+  }
+}
