@@ -26,7 +26,7 @@ public class FFBlocks {
     public static final RegistrySupplier<Block> BLUE_CHRYSANTHEMUM = BLOCKS.register("blue_chrysanthemum", createFlowerBlock("blue_chrysanthemum"));
     public static final RegistrySupplier<Block> BROWN_HYDRANGEA = BLOCKS.register("brown_hydrangea", createFlowerBlock("brown_hydrangea"));
     public static final RegistrySupplier<Block> CYAN_POPPY = BLOCKS.register("cyan_poppy", createFlowerBlock("cyan_poppy"));
-    public static final RegistrySupplier<Block> GLOW_CALLA_LILY = BLOCKS.register("glow_calla_lilly", createFlowerBlock("glow_calla_lilly"));
+    public static final RegistrySupplier<Block> GLOW_CALLA_LILY = BLOCKS.register("glow_calla_lily", createFlowerBlock("glow_calla_lily"));
     public static final RegistrySupplier<Block> GRAY_MOGRA = BLOCKS.register("gray_mogra", createFlowerBlock("gray_mogra"));
     public static final RegistrySupplier<Block> GREEN_ASTAR = BLOCKS.register("green_astar", createFlowerBlock("green_astar"));
     public static final RegistrySupplier<Block> LIGHT_BLUE_ROSE = BLOCKS.register("light_blue_rose", createFlowerBlock("light_blue_rose"));
@@ -53,6 +53,9 @@ public class FFBlocks {
     }
 
     protected static Supplier<FlowerBlock> createFlowerBlock(String id) {
+        if (id.equals("glow_calla_lily")) { // little hacky but It Works™
+            return () -> new FlowerBlock(SuspiciousStewEffectsComponent.DEFAULT, AbstractBlock.Settings.create().mapColor(MapColor.DARK_GREEN).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS).offset(AbstractBlock.OffsetType.XZ).pistonBehavior(PistonBehavior.DESTROY).luminance(value -> 5).emissiveLighting((state, world, pos) -> true));
+        }
         return () -> new FlowerBlock(SuspiciousStewEffectsComponent.DEFAULT, AbstractBlock.Settings.create().mapColor(MapColor.DARK_GREEN).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS).offset(AbstractBlock.OffsetType.XZ).pistonBehavior(PistonBehavior.DESTROY));
     }
 

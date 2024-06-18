@@ -1,0 +1,4 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": { "layer0": "fabulous_flora:block/pink_cherry_blossom" }
+}

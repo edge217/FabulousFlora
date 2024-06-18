@@ -1,0 +1,4 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": { "cross": "fabulous_flora:block/light_blue_rose" }
+}
