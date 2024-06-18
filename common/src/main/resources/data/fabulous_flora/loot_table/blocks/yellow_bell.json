@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1,
+      "bonus_rolls": 0,
+      "entries": [
+        { "type": "minecraft:item", "name": "fabulous_flora:yellow_bell" }
+      ],
+      "conditions": [{ "condition": "minecraft:survives_explosion" }]
+    }
+  ]
+}
