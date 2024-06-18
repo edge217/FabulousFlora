@@ -13,7 +13,6 @@ import dev.architectury.utils.Env;
 import dev.architectury.utils.EnvExecutor;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
-import net.minecraft.block.Block;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
@@ -44,8 +43,7 @@ public final class FabulousFlora {
         @Environment(EnvType.CLIENT)
         public static void initClient() {
             ClientLifecycleEvent.CLIENT_STARTED.register(instance -> {
-                FFBlocks.BLOCKS.forEach(blockRegistrySupplier -> {
-                    Block block = blockRegistrySupplier.get();
+                FFBlocks.BLOCKS.forEach(block -> {
                     RenderTypeRegistry.register(RenderLayer.getCutout(), block);
                 });
             });
